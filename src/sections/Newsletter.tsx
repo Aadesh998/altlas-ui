@@ -1,10 +1,14 @@
 import { useState, type FormEvent } from 'react'
 import { CheckCircle2 } from 'lucide-react'
 import Reveal from '@/components/Reveal'
+import { homepageContentStore } from '@/lib/homepageContentStore'
+import { useSingletonStore } from '@/lib/dataStore'
 
 export default function Newsletter() {
   const [email, setEmail] = useState('')
   const [done, setDone] = useState(false)
+  const { value: content } = useSingletonStore(homepageContentStore)
+  const { newsletter } = content
 
   const submit = (e: FormEvent) => {
     e.preventDefault()
@@ -16,11 +20,10 @@ export default function Newsletter() {
       <div className="mx-auto grid max-w-[1400px] items-center gap-10 px-5 py-16 md:grid-cols-2 md:px-10 md:py-20">
         <Reveal>
           <h2 className="font-display text-[2.2rem] font-medium leading-tight text-white md:text-[2.8rem]">
-            Best rides only.
+            {newsletter.heading}
           </h2>
           <p className="mt-4 max-w-md text-[15px] leading-relaxed text-white/70">
-            First look at new cars, seasonal deals, and routes our chauffeurs love — straight to
-            your inbox.
+            {newsletter.subtext}
           </p>
         </Reveal>
         <Reveal delay={120}>

@@ -5,11 +5,11 @@ import Intro from '@/sections/Intro'
 import DarkCard from '@/sections/DarkCard'
 import BookingBar from '@/sections/BookingBar'
 import Difference from '@/sections/Difference'
-import Fleet from '@/sections/Fleet'
 import WhyDifferent from '@/sections/WhyDifferent'
 import Testimonials from '@/sections/Testimonials'
 import Services from '@/sections/Services'
 import Process from '@/sections/Process'
+import Faqs from '@/sections/Faqs'
 import CtaBanner from '@/sections/CtaBanner'
 import Newsletter from '@/sections/Newsletter'
 import Footer from '@/sections/Footer'
@@ -25,11 +25,11 @@ export default function Home() {
         <DarkCard />
         <BookingBar />
         <Difference />
-        <Fleet />
         <WhyDifferent />
         <Testimonials />
         <Services />
         <Process />
+        <Faqs />
         <CtaBanner />
         <Newsletter />
       </main>

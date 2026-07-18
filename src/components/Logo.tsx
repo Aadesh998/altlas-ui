@@ -1,3 +1,5 @@
+import SmartLink from '@/components/SmartLink'
+
 interface LogoProps {
   className?: string
   wordmark?: string
@@ -5,7 +7,7 @@ interface LogoProps {
 
 export default function Logo({ className = 'text-white', wordmark }: LogoProps) {
   return (
-    <a href="#top" className={`flex items-center gap-3 ${className}`} aria-label="AXLE home">
+    <SmartLink href="#top" className={`flex items-center gap-3 ${className}`} aria-label="AXLE home">
       {/* Steering wheel mark */}
       <svg viewBox="0 0 48 48" className="h-8 w-8" fill="none" stroke="currentColor" strokeWidth="2.4" aria-hidden="true">
         <circle cx="24" cy="24" r="20" />
@@ -17,6 +19,6 @@ export default function Logo({ className = 'text-white', wordmark }: LogoProps) 
       <span className={`text-[1.55rem] font-medium tracking-[0.42em] ${wordmark ?? ''} pl-[0.1em]`}>
         AXLE
       </span>
-    </a>
+    </SmartLink>
   )
 }
